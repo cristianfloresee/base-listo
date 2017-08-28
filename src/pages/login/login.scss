@@ -1,24 +1,71 @@
 page-login {
-  .scroll-content {
-    display:          flex;
-    align-items:      center;
-    background-color: #f0f0f0;
+
+  //IMAGEN BACKGROUND FULLSCREEN
+  ion-content {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: transparent;
   }
+
+   .scroll-content {
+    background-image: radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .logo {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+
+    // Input items
+    ion-item {
+      border-radius: 3px !important;
+      padding-left: 10px !important;
+      margin-bottom: 15px !important;
+      margin-bottom: 10px;
+      color: #fff !important;
+      background-color: rgba(255, 255, 255, .2) !important;
+      font-size: 0.9em;
+    }
+
   .login-card {
     margin:        auto;
     overflow:      hidden;
     background:    #fff;
     box-shadow:    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     border-radius: 2px;
-    .login-header {
-      margin:     -1.6rem -1.6rem 1.6rem;
-      padding:    .8rem;
-      background: linear-gradient(to right, color($colors, uta_yellow) 0%, lighten(color($colors, uta_yellow), 10%) 100%);
-      img {
-        margin:     0 auto;
-        display:    block;
-        max-height: 250px;
-      }
+  }
+
+  //MUESTRA EL HEADER TRANSPARENTE Y LOS BOTONES BLANCOS
+  .transparent-header {
+    .toolbar-content,
+    .back-button {
+      color: white;
     }
+    .toolbar-background,
+    ion-navbar,
+    ion-header {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+    .header-md::after,
+    .toolbar-background-ios {
+      background-image: none;
+      border-bottom: 0;
+    }
+    .header-ios .toolbar-background-ios,
+    .footer-ios .toolbar-background-ios {
+      border: 0;
+    } 
+  }
+  // ---
+
+  ion-footer {
+    height: 47px;
   }
 }

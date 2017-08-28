@@ -14,6 +14,7 @@ import { Base64Service } from '../../providers/base64-service';
 })
 export class LoginPage {
   public loginForm: FormGroup;
+  public backgroundImage = 'assets/img/background/background-1.jpg';
 
   constructor(
     public navCtrl:     NavController,
