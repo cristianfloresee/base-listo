@@ -1,0 +1,137 @@
+<ion-header no-border>
+    <ion-navbar transparent [hidden]="showToolbar"> 
+        <button ion-button menuToggle>
+          <ion-icon name="menu" color="light"></ion-icon>
+        </button>
+        <!--<ion-title>Información Personal</ion-title>-->
+    </ion-navbar>
+</ion-header>
+
+<!--<ion-content padding>
+  <ion-card>
+  <ion-card-header color="primary">
+    Datos Personales
+  </ion-card-header>
+
+  <ion-list>
+
+    <button ion-item>
+      <ion-icon name="cart" item-left></ion-icon>
+      {{user?.NOMBRE}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      NACIONALIDAD: {{user?.PAI_NACIONALIDAD}}
+    </button>
+    
+    <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      CIUDAD: {{user?.PNA_LNAC}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      RUT: {{user?.PER_NRUT}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      ESTADO CIVIL: {{user?.ECI_DSC}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="cafe" item-left></ion-icon>
+      CELULAR: {{user?.CELULAR}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="paw" item-left></ion-icon>
+      EMAIL: {{user?.PER_EMAIL}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="beer" item-left></ion-icon>
+      SEXO: {{user?.SEX_DSC}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="planet" item-left></ion-icon>
+      FECHA DE NACIMIENTO: {{user?.PNA_FNAC}}
+    </button>
+
+  </ion-list>
+</ion-card>
+
+</ion-content>
+-->
+
+
+<!-- DIFERENCIAS NO-PADDING -->
+<ion-content  no-padding  class="content" (ionScroll)="onScroll($event)" [class.transition]="transition"  >
+
+    <div class="profile-header"></div>
+    <div class="profile">
+      <div class="profile-box">
+
+          <!--<ion-img  class="profile-image" src="https://wwwf.imperial.ac.uk/blog/student-blogs/files/2017/01/stokes-profile-400-1.png"></ion-img>-->
+          <ion-img  class="profile-image" src={{photoUrl}}></ion-img>
+
+          <h3 id="profile2-name" padding-top>Cristian Flores </h3>
+          <button ion-button block color="green">Follow</button>
+          <button ion-button icon-left *ngIf="following" block color="gray">
+            <ion-icon name="checkmark"></ion-icon>
+            Following
+          </button>
+
+          <ion-list no-lines padding-top>
+              <button ion-item>
+      <ion-icon name="cart" item-left></ion-icon>
+      {{user?.NOMBRE}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      NACIONALIDAD: {{user?.PAI_NACIONALIDAD}}
+    </button>
+    
+    <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      CIUDAD: {{user?.PNA_LNAC}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      RUT: {{user?.PER_NRUT}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      ESTADO CIVIL: {{user?.ECI_DSC}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="cafe" item-left></ion-icon>
+      CELULAR: {{user?.CELULAR}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="paw" item-left></ion-icon>
+      EMAIL: {{user?.PER_EMAIL}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="beer" item-left></ion-icon>
+      SEXO: {{user?.SEX_DSC}}
+    </button>
+
+    <button ion-item>
+      <ion-icon name="planet" item-left></ion-icon>
+      FECHA DE NACIMIENTO: {{user?.PNA_FNAC}}
+    </button>
+          </ion-list>
+
+      </div>
+    </div>
+
+</ion-content>

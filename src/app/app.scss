@@ -1,0 +1,118 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+//STATUS-BAR TRANSPARENT (ANDROID)
+.platform-android {
+  .ion-page {
+    ion-header {
+      //padding-top: $cordova-md-statusbar-padding;
+      padding-top: 24px;;
+    }
+    
+  }
+}
+//FIN STATUS-BAR TRANSPARENT
+
+
+ion-title{
+    font-family: "sp-title" !important;
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 30px 0px 50px ;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    */
+}
+
+.toolbar-title-md {
+  font-size: 1.6rem;
+  //padding: 0px;
+}
+
+p, h3{
+    font-family: "sp-body" !important; 
+}
+
+
+// ESTILOS PARA LOS ERRORES DE LOS FORMULARIOS
+.form-error {
+  color:       color($colors, danger);
+  margin-left: 1.6rem;
+}
+
+.menu-header {
+  position: relative;
+  img {
+    width:   100%;
+    display: block;
+  }
+  &-content {
+    left:          0;
+    right:         0;
+    bottom:        0;
+    z-index:       2;
+    padding:       .8rem 1.6rem;
+    position:      absolute;
+    line-height:   1;
+    h2, p {
+      margin:        0;
+      overflow:      hidden;
+      white-space:   nowrap;
+      text-overflow: ellipsis;
+    }
+    h2 {
+      color:     white;
+      font-size: 1.6rem;
+    }
+    p {
+      color:     rgba(white, .9);
+      font-size: 1.4rem;
+    }
+  }
+  &:before {
+    left:       0;
+    right:      0;
+    bottom:     0;
+    height:     75%;
+    content:    '';
+    position:   absolute;
+    background: linear-gradient(to top, rgba(black, .5) 0%,rgba(black, 0) 100%);
+  }
+
+  .image-cropper {
+    max-width: 100px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .rounded {
+      display: block;
+      margin: 0 auto;
+      height: 80px;
+      width: 80px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+    
+      background-position: 0% 25%;
+      background-size:cover;
+  }
+  
+}
